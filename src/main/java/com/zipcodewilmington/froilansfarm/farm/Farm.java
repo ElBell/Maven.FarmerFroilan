@@ -100,7 +100,7 @@ public class Farm {
 
     public void populateFarmHouse() {
         FarmHouse farmHouse = new FarmHouse();
-        farmHouse.addPerson("Froilan", new Farmer(this));
+        farmHouse.addPerson("Froilan", new Farmer());
         farmHouse.addPerson("Froilanda", new Pilot());
         setFarmHouse(farmHouse);
     }
