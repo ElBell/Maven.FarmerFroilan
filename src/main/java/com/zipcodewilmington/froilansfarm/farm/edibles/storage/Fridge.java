@@ -16,7 +16,7 @@ public class Fridge {
     private StorageBin<Wheat> wheatStorageBin = new StorageBin<>();
 
     public Fridge() {
-        for (int i = 0; i < 35; i++) {
+        for (int i = 0; i < 70; i++) {
             tomatoStorageBin.store(new Tomato());
             eggStorageBin.store(new EdibleEgg());
             cornStorageBin.store(new EarCorn());
@@ -54,10 +54,10 @@ public class Fridge {
     @Override
     public String toString() {
         return "Fridge{" +
-                "tomatoStorageBin=" + tomatoStorageBin +
-                ", eggStorageBin=" + eggStorageBin +
-                ", cornStorageBin=" + cornStorageBin +
-                ", wheatStorageBin=" + wheatStorageBin +
+                "tomatoes=" + tomatoStorageBin +
+                ", eggs=" + eggStorageBin +
+                ", corn=" + cornStorageBin +
+                ", wheat=" + wheatStorageBin +
                 '}';
     }
 }

@@ -42,8 +42,7 @@ public abstract class Storage<T> {
 
     @Override
     public String toString() {
-        return " {"+ getCount() +
-                '}';
+        return " {"+ getCount() + "}";
     }
 
     private static Storage anonymous = new Storage() {};
