@@ -12,7 +12,6 @@ import java.util.Calendar;
 
 public class Tractor extends Vehicle implements FarmVehicle {
 
-    //public Edible harvest(Crop crop){ return crop.yield(); }
     public Edible harvest(Crop crop){ return crop.yield(); }
 
     public void operate(Farm farm) {

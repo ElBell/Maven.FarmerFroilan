@@ -1,7 +1,6 @@
-package com.zipcodewilmington.froilansfarm.people;
+package com.zipcodewilmington.froilansfarm.farm.people;
 
 import java.util.HashMap;
-import java.util.List;
 
 public class FarmHouse {
     private HashMap<String, Person> people;

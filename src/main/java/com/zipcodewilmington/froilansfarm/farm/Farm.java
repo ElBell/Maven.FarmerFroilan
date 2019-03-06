@@ -2,9 +2,10 @@ package com.zipcodewilmington.froilansfarm.farm;
 
 import com.zipcodewilmington.froilansfarm.farm.edibles.Field;
 import com.zipcodewilmington.froilansfarm.farm.edibles.chickens.ChickenCoop;
+import com.zipcodewilmington.froilansfarm.farm.edibles.storage.Fridge;
 import com.zipcodewilmington.froilansfarm.farm.rideables.horses.Stable;
 import com.zipcodewilmington.froilansfarm.farm.rideables.vehicles.Garage;
-import com.zipcodewilmington.froilansfarm.people.FarmHouse;
+import com.zipcodewilmington.froilansfarm.farm.people.FarmHouse;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ public class Farm {
     private Field field;
     private FarmHouse farmHouse;
     private Garage garage= new Garage();
+    private Fridge fridge = new Fridge();
 
     public Garage getGarage() {
         return garage;

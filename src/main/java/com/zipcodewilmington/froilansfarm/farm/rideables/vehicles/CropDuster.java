@@ -6,12 +6,14 @@ import com.zipcodewilmington.froilansfarm.farm.Farm;
 
 public class CropDuster extends Aircraft implements FarmVehicle {
     public void operate(Farm farm) {
-        for (CropRow cropRow: farm.getField().getCropRows()) {
+        for (CropRow cropRow: farm.getField().getAll()) {
             fertilize(cropRow);
         }
     }
 
     public void fertilize(CropRow cropRow){
-        cropRow.fertilizeAllCrops();
+        for (Crop crop: cropRow.getAll()) {
+            crop.setHasBeenFertilized(true);
+        }
     }
 }

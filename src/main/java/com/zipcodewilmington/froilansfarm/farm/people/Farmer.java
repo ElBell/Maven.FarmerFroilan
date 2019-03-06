@@ -1,7 +1,6 @@
-package com.zipcodewilmington.froilansfarm.people;
+package com.zipcodewilmington.froilansfarm.farm.people;
 
 import com.zipcodewilmington.froilansfarm.farm.Farm;
-import com.zipcodewilmington.froilansfarm.farm.edibles.edibleutilities.Botanist;
 import com.zipcodewilmington.froilansfarm.farm.edibles.edibleutilities.Eater;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Crop;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.CropRow;
@@ -31,8 +30,10 @@ public class Farmer extends Person implements Eater, Rider, Botanist {
         return "E I E I O";
     }
 
-    public void plant(Crop crop, CropRow cropRow) {
-        cropRow.addCrop(crop);
+    public void plant(CropRow cropRow) {
+        for (Crop crop: cropRow.getAll()) {
+            crop.setHasBeenHarvested(false);
+        }
     }
 
 }

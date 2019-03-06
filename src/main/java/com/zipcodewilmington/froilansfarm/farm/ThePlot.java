@@ -8,8 +8,8 @@ import com.zipcodewilmington.froilansfarm.farm.edibles.crops.CropRow;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.farm.rideables.Pilot;
 import com.zipcodewilmington.froilansfarm.farm.rideables.horses.Stable;
-import com.zipcodewilmington.froilansfarm.people.FarmHouse;
-import com.zipcodewilmington.froilansfarm.people.Farmer;
+import com.zipcodewilmington.froilansfarm.farm.people.FarmHouse;
+import com.zipcodewilmington.froilansfarm.farm.people.Farmer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,11 +26,11 @@ public class ThePlot {
 
     private static Field populateField() {
         Field field = new Field();
-        field.addCropRow(new CropRow(CornStalk::new));
-        field.addCropRow(new CropRow(TomatoPlant::new));
-        field.addCropRow(new CropRow(Chaff::new));
-        field.addCropRow(new CropRow(TomatoPlant::new));
-        field.addCropRow(new CropRow(CornStalk::new));
+        field.store(new CropRow(CornStalk::new));
+        field.store(new CropRow(TomatoPlant::new));
+        field.store(new CropRow(Chaff::new));
+        field.store(new CropRow(TomatoPlant::new));
+        field.store(new CropRow(CornStalk::new));
         return field;
     }
 

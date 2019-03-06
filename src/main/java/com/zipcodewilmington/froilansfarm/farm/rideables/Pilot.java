@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm.farm.rideables;
 
 
-import com.zipcodewilmington.froilansfarm.people.Person;
+import com.zipcodewilmington.froilansfarm.farm.people.Person;
 
 public class Pilot extends Person implements Rider {
 
