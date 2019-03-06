@@ -15,5 +15,6 @@ public class HarvestDay implements Day {
         froilan.mount(tractor);
         tractor.operate(farm);
         froilan.dismount();
+
     }
 }
