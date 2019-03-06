@@ -5,27 +5,39 @@ import com.zipcodewilmington.froilansfarm.farm.edibles.crops.EarCorn;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Tomato;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Wheat;
 import com.zipcodewilmington.froilansfarm.farm.edibles.edibleutilities.Edible;
+import com.zipcodewilmington.froilansfarm.farm.utilities.Storage;
 
 public class Fridge {
 
-    private TomatoStorageBin tomatoStorageBin = new TomatoStorageBin();
-    private EggStorageBin eggStorageBin = new EggStorageBin();
-    private CornStorageBin cornStorageBin = new CornStorageBin();
-    private WheatStorageBin wheatStorageBin = new WheatStorageBin();
-
-    public Fridge() {
-
-    }
+    private StorageBin<Tomato> tomatoStorageBin = new StorageBin<>();
+    private StorageBin<EdibleEgg> eggStorageBin = new StorageBin<>();
+    private StorageBin<EarCorn> cornStorageBin = new StorageBin<>();
+    private StorageBin<Wheat> wheatStorageBin = new StorageBin<>();
 
     public void store(Edible edible) {
         if (edible instanceof Tomato) {
-            tomatoStorageBin.store((Tomato) edible);
+            tomatoStorageBin.store(edible);
         } else if (edible instanceof EdibleEgg) {
-            eggStorageBin.store((EdibleEgg) edible);
+            eggStorageBin.store(edible);
         } else if (edible instanceof EarCorn) {
-            cornStorageBin.store((EarCorn)edible);
+            cornStorageBin.store(edible);
         } else {
-            wheatStorageBin.store((Wheat)edible);
+            wheatStorageBin.store(edible);
+        }
+    }
+
+    public Edible getFood(String foodName) {
+        switch (foodName.toLowerCase()) {
+            case "tomato":
+                return tomatoStorageBin.get();
+            case "egg":
+                return eggStorageBin.get();
+            case "corn":
+                return cornStorageBin.get();
+            case "wheat":
+                return wheatStorageBin.get();
+            default:
+                return null;
         }
     }
 }
