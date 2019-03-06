@@ -39,7 +39,7 @@ public class Fridge {
                 return null;
         }
     }
-    
+
     @Override
     public String toString() {
         return "Fridge{" +
