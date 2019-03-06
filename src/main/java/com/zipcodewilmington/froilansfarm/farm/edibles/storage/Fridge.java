@@ -5,7 +5,6 @@ import com.zipcodewilmington.froilansfarm.farm.edibles.crops.EarCorn;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Tomato;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Wheat;
 import com.zipcodewilmington.froilansfarm.farm.edibles.edibleutilities.Edible;
-import com.zipcodewilmington.froilansfarm.farm.utilities.Storage;
 
 public class Fridge {
 

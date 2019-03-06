@@ -24,7 +24,16 @@ public class Farm {
     private FarmHouse farmHouse;
     private Garage garage= new Garage();
     private Fridge fridge = new Fridge();
+    private Farm INSTANCE = new Farm();
 
+    private Farm() {
+        populateField();
+        populateChickenCoops();
+        populateStables();
+        populateFarmHouse();
+    }
+
+    public Farm getINSTANCE() { return INSTANCE; }
 
     public void setFields(Field field) {
         this.field = field;
@@ -46,37 +55,21 @@ public class Farm {
 
     public void storeInFridge(Edible edible) { fridge.store(edible); }
 
-    public List<Stable> getStables() {
-        return stables;
-    }
+    public List<Stable> getStables() { return stables; }
 
-    public List<ChickenCoop> getChickenCoops() {
-        return chickenCoops;
-    }
+    public List<ChickenCoop> getChickenCoops() { return chickenCoops; }
 
-    public void setField(Field field) {
-        this.field = field;
-    }
+    public void setField(Field field) { this.field = field; }
 
-    public FarmHouse getFarmHouse() {
-        return farmHouse;
-    }
+    public FarmHouse getFarmHouse() { return farmHouse; }
 
-    public Garage getGarage() {
-        return garage;
-    }
+    public Garage getGarage() { return garage; }
 
-    public void setGarage(Garage garage) {
-        this.garage = garage;
-    }
+    public void setGarage(Garage garage) { this.garage = garage; }
 
-    public Fridge getFridge() {
-        return fridge;
-    }
+    public Fridge getFridge() { return fridge; }
 
-    public void setFridge(Fridge fridge) {
-        this.fridge = fridge;
-    }
+    public void setFridge(Fridge fridge) { this.fridge = fridge; }
 
     public void populateField() {
         Field field = new Field();
