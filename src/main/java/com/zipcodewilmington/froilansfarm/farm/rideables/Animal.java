@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Animal implements Eater, NoiseMaker {
-    private List<Edible> eaten = new ArrayList<Edible>();
+    private List<Edible> eaten = new ArrayList<>();
 
     public void eat(Edible food) {
         eaten.add(food);
@@ -15,10 +15,6 @@ public abstract class Animal implements Eater, NoiseMaker {
 
     public List<Edible> getEaten() {
         return eaten;
-    }
-
-    public String makeNoise() {
-        return null;
     }
 
 }

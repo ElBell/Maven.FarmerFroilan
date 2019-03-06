@@ -16,7 +16,6 @@ public abstract class Crop implements Produce {
     public boolean isHasBeenHarvested() {
         return hasBeenHarvested;
     }
-
     public boolean isHasBeenFertilized() {
         return hasBeenFertilized;
     }
