@@ -1,4 +1,5 @@
 package com.zipcodewilmington.froilansfarm.farm.rideables.vehicles;
 
-public abstract class Aircraft extends Vehicle {
+public abstract class Aircraft{
+    public void fly(){};
 }

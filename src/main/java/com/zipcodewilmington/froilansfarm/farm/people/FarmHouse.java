@@ -12,4 +12,8 @@ public class FarmHouse {
     public void addPerson(String name, Person person) {
         this.people.put(name, person);
     }
+
+    public Person getPerson(String name) {
+        return people.get(name);
+    }
 }

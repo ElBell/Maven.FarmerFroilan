@@ -13,7 +13,7 @@ public class Pilot extends Person implements Rider {
         this.rideable = rideable;
     }
 
-    public void dismount(Rideable aircraft) {
+    public void dismount() {
         this.rideable = null;
     }
 }

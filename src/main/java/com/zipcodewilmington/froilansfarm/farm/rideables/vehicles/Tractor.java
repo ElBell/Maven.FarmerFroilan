@@ -8,12 +8,19 @@ import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.CropRow;
 
 import java.text.DateFormatSymbols;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class Tractor extends Vehicle implements FarmVehicle {
-
     public Edible harvest(Crop crop){ return crop.yield(); }
 
     public void operate(Farm farm) {
+        for(CropRow cropRow: farm.getField().getAll()) {
+            for(Crop crop: cropRow.getAll()) {
+                farm.storeInFridge(harvest(crop));
+            }
         }
+    }
+
 }

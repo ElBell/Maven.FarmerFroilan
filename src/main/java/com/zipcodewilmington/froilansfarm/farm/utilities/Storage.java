@@ -15,9 +15,13 @@ public abstract class Storage<T> {
     public List<T> get(int numberToGet) {
         List<T> getList = new ArrayList<>();
         for (int i = 0; i < numberToGet; i++) {
-            getList.add(storedObjects.remove(getCount()));
+            getList.add(storedObjects.remove(getCount() - 1));
         }
-        return null;
+        return getList;
+    }
+
+    public T get() {
+        return storedObjects.remove(getCount());
     }
 
     public List<T> getAll() {
@@ -36,6 +40,10 @@ public abstract class Storage<T> {
         storedObjects.clear();
     }
 
+    @Override
+    public String toString() {
+        return " {"+ getCount() + "}";
+    }
 
     private static Storage anonymous = new Storage() {};
 
