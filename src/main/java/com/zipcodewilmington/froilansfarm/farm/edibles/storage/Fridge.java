@@ -39,4 +39,14 @@ public class Fridge {
                 return null;
         }
     }
+    
+    @Override
+    public String toString() {
+        return "Fridge{" +
+                "tomatoStorageBin=" + tomatoStorageBin +
+                ", eggStorageBin=" + eggStorageBin +
+                ", cornStorageBin=" + cornStorageBin +
+                ", wheatStorageBin=" + wheatStorageBin +
+                '}';
+    }
 }

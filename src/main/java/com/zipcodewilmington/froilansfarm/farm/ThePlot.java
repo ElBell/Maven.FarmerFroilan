@@ -1,13 +1,10 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
 public class ThePlot {
-    private static final Farm farm = new Farm();
+    private static final Farm farm = Farm.getINSTANCE();
 
     public static void main(String[] args) {
-        farm.populateField();
-        farm.populateChickenCoops();
-        farm.populateStables();
-        farm.populateFarmHouse();
+
     }
 
 
