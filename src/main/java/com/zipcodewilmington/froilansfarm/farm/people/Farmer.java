@@ -8,9 +8,7 @@ import com.zipcodewilmington.froilansfarm.farm.rideables.Rideable;
 import com.zipcodewilmington.froilansfarm.farm.rideables.Rider;
 
 public class Farmer extends Person implements Eater, Rider, Botanist {
-
     private Rideable rideable = null;
-
     public Rideable getRideable() { return rideable; }
 
     public void mount(Rideable rideable) {

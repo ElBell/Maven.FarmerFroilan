@@ -15,6 +15,15 @@ public class Fridge {
     private StorageBin<EarCorn> cornStorageBin = new StorageBin<>();
     private StorageBin<Wheat> wheatStorageBin = new StorageBin<>();
 
+    public Fridge() {
+        for (int i = 0; i < 35; i++) {
+            tomatoStorageBin.store(new Tomato());
+            eggStorageBin.store(new EdibleEgg());
+            cornStorageBin.store(new EarCorn());
+            wheatStorageBin.store(new Wheat());
+        }
+    }
+
     public void store(Edible edible) {
         if (edible instanceof Tomato) {
             tomatoStorageBin.store(edible);

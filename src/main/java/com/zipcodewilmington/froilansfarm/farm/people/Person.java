@@ -12,26 +12,19 @@ import java.util.Arrays;
 import java.util.List;
 
 public abstract class Person implements Eater, NoiseMaker {
-    private Farm farm;
     private List<Edible> eaten = new ArrayList<Edible>();
-
     public void eat(List<Edible> food) {
         eaten.addAll(food);
     }
-
     public List<Edible> getEaten() {
         return eaten;
     }
-
     public String makeNoise() {
         return "Hi";
     }
 
-    public void Person() {
-        farm = Farm.getINSTANCE();
-    }
-
     public void getEggs() {
+        Farm farm = Farm.getInstance();
         for(ChickenCoop chickenCoop: farm.getChickenCoops())
             for (Chicken chicken: chickenCoop.getAll()) {
                 farm.storeInFridge(chicken.yield());

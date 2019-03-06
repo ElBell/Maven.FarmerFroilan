@@ -24,8 +24,11 @@ public class Farm {
     private FarmHouse farmHouse;
     private Garage garage= new Garage();
     private Fridge fridge = new Fridge();
-    private static Farm INSTANCE = new Farm();
+    private static Farm INSTANCE;// = new Farm();
 
+    static {
+        INSTANCE = new Farm();
+    }
     private Farm() {
         populateField();
         populateChickenCoops();
@@ -33,7 +36,12 @@ public class Farm {
         populateFarmHouse();
     }
 
-    public static Farm getINSTANCE() { return INSTANCE; }
+    public static Farm getInstance() {
+//        if(INSTANCE == null) {
+//            INSTANCE = new Farm();
+//        }
+        return INSTANCE;
+    }
 
     public void setFields(Field field) {
         this.field = field;

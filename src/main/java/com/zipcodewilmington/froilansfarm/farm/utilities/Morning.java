@@ -11,7 +11,7 @@ import com.zipcodewilmington.froilansfarm.farm.rideables.horses.Stable;
 import java.util.List;
 
 public class Morning implements Day{
-    private Farm farm = Farm.getINSTANCE();
+    private Farm farm = Farm.getInstance();
     private Farmer froilan = (Farmer) farm.getFarmHouse().getPerson("Froilan");
     private Pilot froilanda = (Pilot)farm.getFarmHouse().getPerson("Froilanda");
     private Fridge fridge = farm.getFridge();
@@ -34,7 +34,7 @@ public class Morning implements Day{
     }
 
     private void froilanEatBreakfast() {
-        List<Edible> froilanBreakfast = fridge.getFood("corn", 3);
+        List<Edible> froilanBreakfast = fridge.getFood("corn", 1);
         froilanBreakfast.addAll(fridge.getFood("tomato", 2));
         froilanBreakfast.addAll(fridge.getFood("egg", 5));
         froilan.eat(froilanBreakfast);
