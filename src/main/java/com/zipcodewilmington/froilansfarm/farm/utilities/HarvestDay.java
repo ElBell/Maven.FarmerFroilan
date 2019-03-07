@@ -13,12 +13,12 @@ public class HarvestDay implements Day {
     private Morning morning = new Morning();
     @Override
     public void run() {
-        System.out.println(farm.getFridge());
+        //System.out.println(farm.getFridge());
         morning.run();
         froilan.mount(tractor);
         tractor.operate(farm);
         froilan.dismount();
         froilanda.getEggs();
-        System.out.println(farm.getFridge());
+        //System.out.println(farm.getFridge());
     }
 }
