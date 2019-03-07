@@ -21,4 +21,9 @@ public class HarvestDay implements Day {
         froilanda.getEggs();
         System.out.println(farm.getFridge());
     }
+
+    public static void main(String[] args) {
+        HarvestDay harvestDay = new HarvestDay();
+        harvestDay.run();
+    }
 }

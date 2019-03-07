@@ -21,7 +21,7 @@ public abstract class Storage<T> {
     }
 
     public T get() {
-        return storedObjects.remove(getCount());
+        return storedObjects.remove(getCount() - 1);
     }
 
     public List<T> getAll() {
