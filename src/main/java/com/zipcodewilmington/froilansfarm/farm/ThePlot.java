@@ -1,14 +1,15 @@
 package com.zipcodewilmington.froilansfarm.farm;
-
 import com.zipcodewilmington.froilansfarm.farm.utilities.FertilizeDay;
+import com.zipcodewilmington.froilansfarm.farm.utilities.HarvestDay;
+
 
 public class ThePlot {
-    private static final Farm farm = Farm.getINSTANCE();
+    private static FertilizeDay fertilizeDay = new FertilizeDay();
+    private static HarvestDay harvestDay = new HarvestDay();
 
     public static void main(String[] args) {
-        FertilizeDay fertilizeDay = new FertilizeDay();
         fertilizeDay.run();
+        harvestDay.run();
     }
-
 
 }

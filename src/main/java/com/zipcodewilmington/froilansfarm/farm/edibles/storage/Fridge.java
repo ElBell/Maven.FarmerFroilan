@@ -6,12 +6,23 @@ import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Tomato;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Wheat;
 import com.zipcodewilmington.froilansfarm.farm.edibles.edibleutilities.Edible;
 
+import java.util.List;
+
 public class Fridge {
 
     private StorageBin<Tomato> tomatoStorageBin = new StorageBin<>();
     private StorageBin<EdibleEgg> eggStorageBin = new StorageBin<>();
     private StorageBin<EarCorn> cornStorageBin = new StorageBin<>();
     private StorageBin<Wheat> wheatStorageBin = new StorageBin<>();
+
+    public Fridge() {
+        for (int i = 0; i < 70; i++) {
+            tomatoStorageBin.store(new Tomato());
+            eggStorageBin.store(new EdibleEgg());
+            cornStorageBin.store(new EarCorn());
+            wheatStorageBin.store(new Wheat());
+        }
+    }
 
     public void store(Edible edible) {
         if (edible instanceof Tomato) {
@@ -25,16 +36,16 @@ public class Fridge {
         }
     }
 
-    public Edible getFood(String foodName) {
+    public List<Edible> getFood(String foodName, int numberToGet) {
         switch (foodName.toLowerCase()) {
             case "tomato":
-                return tomatoStorageBin.get();
+                return tomatoStorageBin.get(numberToGet);
             case "egg":
-                return eggStorageBin.get();
+                return eggStorageBin.get(numberToGet);
             case "corn":
-                return cornStorageBin.get();
+                return cornStorageBin.get(numberToGet);
             case "wheat":
-                return wheatStorageBin.get();
+                return wheatStorageBin.get(numberToGet);
             default:
                 return null;
         }
@@ -43,10 +54,10 @@ public class Fridge {
     @Override
     public String toString() {
         return "Fridge{" +
-                "tomatoStorageBin=" + tomatoStorageBin +
-                ", eggStorageBin=" + eggStorageBin +
-                ", cornStorageBin=" + cornStorageBin +
-                ", wheatStorageBin=" + wheatStorageBin +
+                "tomatoes=" + tomatoStorageBin +
+                ", eggs=" + eggStorageBin +
+                ", corn=" + cornStorageBin +
+                ", wheat=" + wheatStorageBin +
                 '}';
     }
 }

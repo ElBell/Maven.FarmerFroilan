@@ -11,8 +11,5 @@ public class Horse extends Animal implements Rideable {
         return "Neeeeeigh";
     }
 
-    @Override
-    public void eat(Edible food) {
-        super.eat(food);
-    }
+
 }

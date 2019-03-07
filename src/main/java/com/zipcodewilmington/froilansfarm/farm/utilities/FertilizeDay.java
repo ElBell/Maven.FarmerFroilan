@@ -15,12 +15,12 @@ import com.zipcodewilmington.froilansfarm.farm.rideables.vehicles.CropDuster;
 import java.util.List;
 
 public class FertilizeDay implements Day {
-    private Farm farm = Farm.getINSTANCE();
+    private Farm farm = Farm.getInstance();
     private Farmer froilan = (Farmer) farm.getFarmHouse().getPerson("Froilan");
     private Pilot froilanda = (Pilot) farm.getFarmHouse().getPerson("Froilanda");
     private CropDuster cropDuster = (CropDuster) farm.getGarage().getCropDuster();
     private List<Stable> horseStables = farm.getStables();
-    private Fridge fridge = new Fridge();
+    private Fridge fridge = farm.getFridge();
 
     public void rideEveryHorse() {
         for (Stable stables : horseStables) {
@@ -36,31 +36,22 @@ public class FertilizeDay implements Day {
         for (Stable stables : horseStables) {
             for (Horse horse : stables.getAll()
             ) {
-                for (int i = 0; i < 3; i++) {
-                    horse.eat(fridge.getFood("corn")); 
-                }
+                    horse.eat(fridge.getFood("corn",3));
+
             }
         }
     }
 
     public void feedingFroilan() {
-        froilan.eat(fridge.getFood("corn"));
-        for (int i = 0; i < 2; i++) {
-            froilan.eat(fridge.getFood("tomato"));
-        }
-        for (int i = 0; i < 5; i++) {
-            froilan.eat(fridge.getFood("egg"));
-        }
+        froilan.eat(fridge.getFood("corn",1));
+        froilan.eat(fridge.getFood("tomato",2));
+        froilan.eat(fridge.getFood("egg",5));
     }
 
     public void feedingFroilanda() {
-        for (int i = 0; i < 2; i++) {
-            froilanda.eat(fridge.getFood("corn"));
-        }
-        froilan.eat(fridge.getFood("tomato"));
-        for (int i = 0; i < 2; i++) {
-            froilan.eat(fridge.getFood("egg"));
-        }
+        froilanda.eat(fridge.getFood("corn",2));
+        froilan.eat(fridge.getFood("tomato",1));
+        froilan.eat(fridge.getFood("egg",2));
     }
 
     public void froilandaFertilizingCrops() {
@@ -71,6 +62,7 @@ public class FertilizeDay implements Day {
         froilanda.dismount();
     }
 
+    Morning morning = new Morning();
 
     @Override
     public void run() {
@@ -80,5 +72,6 @@ public class FertilizeDay implements Day {
         feedingFroilanda();
         froilandaFertilizingCrops();
         froilan.getEggs();
+        System.out.println(farm.getFridge());
     }
 }

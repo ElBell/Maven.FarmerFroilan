@@ -17,4 +17,10 @@ public class CropDuster extends Aircraft implements FarmVehicle {
             crop.setHasBeenFertilized(true);
         }
     }
+
+    public void fly() {
+        Runnable runnable = () -> {
+            System.out.println("Froilanda: Ready for take off!");
+        }; runnable.run();
+    }
 }
