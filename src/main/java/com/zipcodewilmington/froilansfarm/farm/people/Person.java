@@ -30,7 +30,7 @@ public abstract class Person implements Eater, NoiseMaker {
         farm = Farm.getINSTANCE();
     }
 
-    private void getEggs() {
+    public void getEggs() {
         for(ChickenCoop chickenCoop: farm.getChickenCoops())
             for (Chicken chicken: chickenCoop.getAll()) {
                 farm.storeInFridge(chicken.yield());
