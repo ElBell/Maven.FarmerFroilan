@@ -11,6 +11,7 @@ public class HarvestDay implements Day {
     private Person froilanda = farm.getFarmHouse().getPerson("Froilanda");
     private Tractor tractor = (Tractor) farm.getGarage().getTractor();
     private Morning morning = new Morning();
+
     @Override
     public void run() {
         System.out.println(farm.getFridge());

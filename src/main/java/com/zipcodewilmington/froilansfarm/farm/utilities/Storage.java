@@ -21,7 +21,7 @@ public abstract class Storage<T> {
     }
 
     public T get() {
-        return storedObjects.remove(getCount());
+        return storedObjects.remove(getCount() - 1);
     }
 
     public List<T> getAll() {
@@ -30,10 +30,6 @@ public abstract class Storage<T> {
 
     public int getCount() {
         return storedObjects.size();
-    }
-
-    public T[] getArray(T[] array) {
-        return storedObjects.toArray(array);
     }
 
     public void removeAll() {
