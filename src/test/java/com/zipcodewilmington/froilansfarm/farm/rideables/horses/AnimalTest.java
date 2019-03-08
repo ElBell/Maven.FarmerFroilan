@@ -10,15 +10,7 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-public class HorseTest {
-
-    @Test
-    public void makeNoise() {
-        Horse horse = new Horse();
-        String expected = "Neeeeeigh";
-        String actual = horse.makeNoise();
-        Assert.assertEquals(expected, actual);
-    }
+public class AnimalTest {
 
     @Test
     public void eat() {

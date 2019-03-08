@@ -55,7 +55,11 @@ public class Farm {
 
     public Fridge getFridge() { return fridge; }
 
-    private void populateField() {
+    public void setFridge(Fridge fridge) {
+        this.fridge = fridge;
+    }
+
+    public void populateField() {
         Field field = new Field();
         field.store(new CropRow(CornStalk::new));
         field.store(new CropRow(TomatoPlant::new));

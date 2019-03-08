@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.farm.utilities;
 import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Crop;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.CropRow;
+import com.zipcodewilmington.froilansfarm.farm.edibles.storage.Fridge;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,6 +22,8 @@ public class HarvestDayTest {
 
     @Test
     public void run() {
+        farm.setFridge(new Fridge());
+        farm.populateField();
         int foodBefore = farm.getFridge().totalFood();
         for (CropRow cropRow: farm.getField().getAll()) {
             for(Crop crop: cropRow.getAll()) {
@@ -31,7 +34,7 @@ public class HarvestDayTest {
         harvestDay.run();
         int foodAfter = farm.getFridge().totalFood();
         int actual = foodAfter - foodBefore;
-        int expected = 147;
+        int expected = 190;
         Assert.assertEquals(expected, actual);
     }
 
