@@ -36,22 +36,22 @@ public class FertilizeDay implements Day {
         for (Stable stables : horseStables) {
             for (Horse horse : stables.getAll()
             ) {
-                    horse.eat(fridge.getFood("corn",3));
+                horse.eat(fridge.getFood("corn", 3));
 
             }
         }
     }
 
     public void feedingFroilan() {
-        froilan.eat(fridge.getFood("corn",1));
-        froilan.eat(fridge.getFood("tomato",2));
-        froilan.eat(fridge.getFood("egg",5));
+        froilan.eat(fridge.getFood("corn", 1));
+        froilan.eat(fridge.getFood("tomato", 2));
+        froilan.eat(fridge.getFood("egg", 5));
     }
 
     public void feedingFroilanda() {
-        froilanda.eat(fridge.getFood("corn",2));
-        froilan.eat(fridge.getFood("tomato",1));
-        froilan.eat(fridge.getFood("egg",2));
+        froilanda.eat(fridge.getFood("corn", 2));
+        froilan.eat(fridge.getFood("tomato", 1));
+        froilan.eat(fridge.getFood("egg", 2));
     }
 
     public void froilandaFertilizingCrops() {
