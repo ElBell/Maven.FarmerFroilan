@@ -14,7 +14,7 @@ import com.zipcodewilmington.froilansfarm.farm.rideables.vehicles.CropDuster;
 
 import java.util.List;
 
-public class FertilizeDay implements Day {
+public class FertilizeDay extends Day {
     private Farm farm = Farm.getInstance();
     private Farmer froilan = (Farmer) farm.getFarmHouse().getPerson("Froilan");
     private Pilot froilanda = (Pilot) farm.getFarmHouse().getPerson("Froilanda");
@@ -62,10 +62,9 @@ public class FertilizeDay implements Day {
         froilanda.dismount();
     }
 
-    Morning morning = new Morning();
-
     @Override
     public void run() {
+        haveBreakfast();
         rideEveryHorse();
         feedEveryHorse();
         feedingFroilan();
