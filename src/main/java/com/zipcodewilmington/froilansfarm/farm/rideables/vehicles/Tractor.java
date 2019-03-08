@@ -18,6 +18,7 @@ public class Tractor extends Vehicle implements FarmVehicle {
         Edible edible = crop.yield();
         crop.setHasBeenHarvested(true);
         crop.setHasBeenFertilized(false);
+
         return edible; }
 
 
