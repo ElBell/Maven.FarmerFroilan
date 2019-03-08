@@ -61,7 +61,7 @@ public class FarmTest {
     @Test
     public void testFarmCropRows() {
         Farm farm = Farm.getInstance();
-        int expected = 25;
+        int expected = 175;
         int actual = 0;
         for (CropRow cropRow: farm.getField().getAll()) {
             actual += cropRow.getCount();

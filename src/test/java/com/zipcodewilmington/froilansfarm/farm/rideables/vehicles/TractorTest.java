@@ -14,10 +14,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TractorTest {
-Farm farm = Farm.getInstance();
+private Farm farm = Farm.getInstance();
 
     @Test
-    public void harvest() {
+    public void harvestTest() {
         //Given
         Farmer farmer = new Farmer();
         CropDuster cropDuster = new CropDuster();
@@ -37,7 +37,7 @@ Farm farm = Farm.getInstance();
     }
 
     @Test
-    public void operate() {
+    public void operateTest() {
         //Given
         Farmer farmer = new Farmer();
         CropDuster cropDuster = new CropDuster();
@@ -45,7 +45,7 @@ Farm farm = Farm.getInstance();
         farmer.plant(farm.getField().getAll().get(1));
         cropDuster.operate(farm);
         String expected = "Fridge{" +
-                "tomatoes=" + " {105}" +
+                "tomatoes=" + " {104}" +
                 ", eggs=" + " {70}" +
                 ", corn=" + " {70}" +
                 ", wheat=" + " {70}" +
@@ -60,7 +60,7 @@ Farm farm = Farm.getInstance();
     }
 
     @Test
-    public void instanceOfFarmVehicle() {
+    public void instanceOfFarmVehicleTest() {
         //Given
         Tractor tractor = new Tractor();
         Boolean expected = true;
@@ -73,7 +73,7 @@ Farm farm = Farm.getInstance();
     }
 
     @Test
-    public void instanceOfVehicle() {
+    public void instanceOfVehicleTest() {
         //Given
         Tractor tractor = new Tractor();
         Boolean expected = true;
