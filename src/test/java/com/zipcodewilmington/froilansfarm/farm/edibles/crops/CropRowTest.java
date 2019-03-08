@@ -80,7 +80,7 @@ public class CropRowTest {
 
     @Test
     public void getCount() {
-        int expected = 8;
+        int expected = 38;
         Crop crop1 = new TomatoPlant();
         Crop crop2 = new TomatoPlant();
         Crop crop3 = new TomatoPlant();
@@ -107,7 +107,7 @@ public class CropRowTest {
 
     @Test
     public void toStringTest() {
-        String expected = " {8}";
+        String expected = " {38}";
         Crop crop1 = new TomatoPlant();
         Crop crop2 = new TomatoPlant();
         Crop crop3 = new TomatoPlant();
