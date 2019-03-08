@@ -94,4 +94,24 @@ public class FertilizeDayTest {
         Assert.assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void runTest() {
+        //Given
+        farm.setFridge(new Fridge());
+        FertilizeDay fertilizeDay = new FertilizeDay();
+        String expected = "Fridge{" +
+                "tomatoes=" + " {67}" +
+                ", eggs=" + " {78}" +
+                ", corn=" + " {37}" +
+                ", wheat=" + " {70}" +
+                '}';
+
+        //When
+        fertilizeDay.run();
+        String actual = farm.getFridge().toString();
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
 }

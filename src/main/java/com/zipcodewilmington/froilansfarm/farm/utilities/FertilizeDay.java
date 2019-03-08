@@ -65,12 +65,7 @@ public class FertilizeDay extends Day {
     @Override
     public void run() {
         haveBreakfast();
-        rideEveryHorse();
-        feedEveryHorse();
-        feedingFroilan();
-        feedingFroilanda();
         froilandaFertilizingCrops();
         froilan.getEggs();
-        System.out.println(farm.getFridge());
     }
 }
