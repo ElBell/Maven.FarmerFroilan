@@ -11,15 +11,16 @@ public class HarvestDay implements Day {
     private Person froilanda = farm.getFarmHouse().getPerson("Froilanda");
     private Tractor tractor = (Tractor) farm.getGarage().getTractor();
     private Morning morning = new Morning();
+
     @Override
     public void run() {
-        System.out.println(farm.getFridge());
+        //System.out.println(farm.getFridge());
         morning.run();
         froilan.mount(tractor);
         tractor.operate(farm);
         froilan.dismount();
         froilanda.getEggs();
-        System.out.println(farm.getFridge());
+        //System.out.println(farm.getFridge());
     }
 
     public static void main(String[] args) {

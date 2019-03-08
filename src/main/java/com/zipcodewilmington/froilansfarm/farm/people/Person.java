@@ -23,6 +23,7 @@ public abstract class Person implements Eater, NoiseMaker {
         return "Hi";
     }
 
+
     public void getEggs() {
         Farm farm = Farm.getInstance();
         for(ChickenCoop chickenCoop: farm.getChickenCoops())

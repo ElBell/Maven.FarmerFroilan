@@ -13,7 +13,10 @@ import java.util.Calendar;
 import java.util.List;
 
 public class Tractor extends Vehicle implements FarmVehicle {
-    public Edible harvest(Crop crop){ return crop.yield(); }
+    private Edible harvest(Crop crop){
+        crop.setHasBeenHarvested(true);
+        crop.setHasBeenFertilized(false);
+        return crop.yield(); }
 
     public void operate(Farm farm) {
         for(CropRow cropRow: farm.getField().getAll()) {

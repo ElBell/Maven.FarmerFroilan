@@ -37,17 +37,22 @@ public class Fridge {
     }
 
     public List<Edible> getFood(String foodName, int numberToGet) {
-        switch (foodName.toLowerCase()) {
-            case "tomato":
-                return tomatoStorageBin.get(numberToGet);
-            case "egg":
-                return eggStorageBin.get(numberToGet);
-            case "corn":
-                return cornStorageBin.get(numberToGet);
-            case "wheat":
-                return wheatStorageBin.get(numberToGet);
-            default:
-                return null;
+        try {
+            switch (foodName.toLowerCase()) {
+                case "tomato":
+                    return tomatoStorageBin.get(numberToGet);
+                case "egg":
+                    return eggStorageBin.get(numberToGet);
+                case "corn":
+                    return cornStorageBin.get(numberToGet);
+                case "wheat":
+                    return wheatStorageBin.get(numberToGet);
+                default:
+                    return null;
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            e.getStackTrace();
+            return null;
         }
     }
     public Integer amountOfEggs(){

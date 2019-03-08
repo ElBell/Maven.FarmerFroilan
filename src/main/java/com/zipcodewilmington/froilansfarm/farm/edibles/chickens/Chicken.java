@@ -11,6 +11,10 @@ public class Chicken extends Animal implements Produce {
         this.hasBeenFertilized = hasBeenFertilized;
     }
 
+    public boolean isHasBeenFertilized() {
+        return hasBeenFertilized;
+    }
+
     public String makeNoise() {
         return "ChaChiChaChiChaChi";
     }

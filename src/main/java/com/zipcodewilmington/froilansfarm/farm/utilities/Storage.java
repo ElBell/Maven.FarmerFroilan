@@ -32,10 +32,6 @@ public abstract class Storage<T> {
         return storedObjects.size();
     }
 
-    public T[] getArray(T[] array) {
-        return storedObjects.toArray(array);
-    }
-
     public void removeAll() {
         storedObjects.clear();
     }
