@@ -24,7 +24,7 @@ public abstract class Day {
         froilanEatBreakfast();
     }
 
-    public void rideAndFeedAllHorses() {
+    private void rideAndFeedAllHorses() {
         for(Stable stable: farm.getStables()) {
             for(Horse horse: stable.getAll()) {
                 froilan.mount(horse);
@@ -34,14 +34,14 @@ public abstract class Day {
         }
     }
 
-    public void froilanEatBreakfast() {
+    private void froilanEatBreakfast() {
         List<Edible> froilanBreakfast = fridge.getFood("corn", 1);
         froilanBreakfast.addAll(fridge.getFood("tomato", 2));
         froilanBreakfast.addAll(fridge.getFood("egg", 5));
         froilan.eat(froilanBreakfast);
     }
 
-    public void froilandaEatBreakfast() {
+    private void froilandaEatBreakfast() {
         List<Edible> froilandaBreakfast = fridge.getFood("corn", 2);
         froilandaBreakfast.addAll(fridge.getFood("tomato", 1));
         froilandaBreakfast.addAll(fridge.getFood("egg", 2));

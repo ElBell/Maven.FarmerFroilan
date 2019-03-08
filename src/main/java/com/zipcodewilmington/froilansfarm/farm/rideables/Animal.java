@@ -18,8 +18,6 @@ public abstract class Animal implements Eater, NoiseMaker {
         return eaten;
     }
 
-    public String makeNoise() {
-        return null;
-    }
+    public abstract String makeNoise();
 
 }

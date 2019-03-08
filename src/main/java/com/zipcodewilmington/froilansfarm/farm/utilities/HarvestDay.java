@@ -14,11 +14,9 @@ public class HarvestDay extends Day {
     @Override
     public void run() {
         haveBreakfast();
-        //System.out.println(farm.getFridge());
         froilan.mount(tractor);
         tractor.operate(farm);
         froilan.dismount();
         froilanda.getEggs();
-        //System.out.println(farm.getFridge());
     }
 }
