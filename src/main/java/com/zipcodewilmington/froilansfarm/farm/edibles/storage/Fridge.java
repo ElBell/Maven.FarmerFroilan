@@ -50,6 +50,11 @@ public class Fridge {
                 return null;
         }
     }
+    public Integer amountOfEggs(){
+       return eggStorageBin.getCount();
+
+
+    }
 
     @Override
     public String toString() {
