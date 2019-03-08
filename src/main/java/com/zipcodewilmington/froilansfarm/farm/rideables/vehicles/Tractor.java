@@ -14,9 +14,11 @@ import java.util.List;
 
 public class Tractor extends Vehicle implements FarmVehicle {
     private Edible harvest(Crop crop){
+        Edible edible = crop.yield();
         crop.setHasBeenHarvested(true);
         crop.setHasBeenFertilized(false);
-        return crop.yield(); }
+        return edible;
+    }
 
     public void operate(Farm farm) {
         for(CropRow cropRow: farm.getField().getAll()) {
