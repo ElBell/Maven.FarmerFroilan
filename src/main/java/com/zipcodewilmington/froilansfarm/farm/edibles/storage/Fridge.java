@@ -55,6 +55,9 @@ public class Fridge {
             return null;
         }
     }
+    public int totalFood() {
+        return tomatoStorageBin.getCount() + eggStorageBin.getCount() + cornStorageBin.getCount() + wheatStorageBin.getCount();
+    }
 
     @Override
     public String toString() {
