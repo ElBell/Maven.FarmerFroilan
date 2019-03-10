@@ -30,6 +30,8 @@ public class MarketDayTest {
         int foodBefore = farm.getFridge().totalFood();
         marketDay.run();
         int foodAfter = farm.getFridge().totalFood();
+
+
         Assert.assertTrue(foodBefore > foodAfter);
     }
 
