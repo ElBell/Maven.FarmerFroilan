@@ -6,6 +6,7 @@ import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Crop;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.CropRow;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Tomato;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Wheat;
+import com.zipcodewilmington.froilansfarm.farm.edibles.storage.Fridge;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -19,13 +20,13 @@ public class MarketDayTest {
     private Farm farm = Farm.getInstance();
     @Before
     public void setUp() {
-        marketDay = new MarketDay();
         farm.setFarm();
         for (int i = 0; i < 100; i++) {
             farm.getFridge().store(new EdibleEgg());
             farm.getFridge().store(new Tomato());
             farm.getFridge().store(new Wheat());
         }
+        marketDay = new MarketDay();
     }
 
     @Test

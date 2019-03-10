@@ -23,7 +23,7 @@ public class Farm {
     private Field field;
     private FarmHouse farmHouse;
     private Garage garage= new Garage();
-    private Fridge fridge = new Fridge();
+    private Fridge fridge;
     private int savings = 0;
     private static Farm INSTANCE = null;
 
@@ -37,6 +37,7 @@ public class Farm {
         populateChickenCoops();
         populateStables();
         populateFarmHouse();
+        setFridge();
     }
 
     public void profit(int profit) {
@@ -68,8 +69,9 @@ public class Farm {
 
     public Fridge getFridge() { return fridge; }
 
-    public void setFridge(Fridge fridge) { this.fridge = fridge; }
-
+    private void setFridge() {
+        this.fridge = new Fridge();
+    }
     private void populateField() {
         Field field = new Field();
         field.store(new CropRow(CornStalk::new));

@@ -16,8 +16,8 @@ public class HarvestDayTest {
     private Farm farm = Farm.getInstance();
     @Before
     public void setUp() {
-        harvestDay = new HarvestDay();
         farm.setFarm();
+        harvestDay = new HarvestDay();
     }
 
     @After

@@ -7,4 +7,9 @@ public abstract class Vehicle implements NoiseMaker, Rideable {
     public String makeNoise() {
         return "Vrumm";
     }
+
+    private static Vehicle anonymous = new Vehicle() {
+    };
+
+    public static Vehicle getAnonymous() {return  anonymous;}
 }
