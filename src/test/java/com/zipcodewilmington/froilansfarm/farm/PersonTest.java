@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm.farm.people;
+package com.zipcodewilmington.froilansfarm.farm;
 
 import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.farm.edibles.chickens.ChickenCoop;
@@ -6,6 +6,7 @@ import com.zipcodewilmington.froilansfarm.farm.edibles.chickens.EdibleEgg;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.EarCorn;
 import com.zipcodewilmington.froilansfarm.farm.edibles.edibleutilities.Edible;
 import com.zipcodewilmington.froilansfarm.farm.edibles.storage.Fridge;
+import com.zipcodewilmington.froilansfarm.farm.people.Person;
 import com.zipcodewilmington.froilansfarm.farm.rideables.Rideable;
 import org.junit.Assert;
 import org.junit.Before;

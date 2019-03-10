@@ -13,6 +13,15 @@ public class ThePlot {
 
     public static void main(String[] args) {
         runWeek();
+        runWeek();
+        runWeek();
+        runWeek();
+        runWeek();
+        runWeek();
+        runWeek();
+        runWeek();
+        runWeek();
+        runWeek();
     }
 
     private static void runWeek() {
