@@ -19,6 +19,21 @@ public class FarmerTest {
     public void getRideable() {
         // Given
         Farmer farmer = new Farmer();
+        Horse horse = new Horse();
+
+        // When
+        farmer.mount(horse);
+        Rideable rideable = farmer.getRideable();
+
+        // Then
+        Assert.assertNotNull(rideable);
+
+    }
+
+    @org.junit.Test
+    public void getRideableNull() {
+        // Given
+        Farmer farmer = new Farmer();
 
         // When
         Rideable rideable = farmer.getRideable();

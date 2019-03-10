@@ -69,12 +69,12 @@ public class Fridge {
         int surplusEggs = eggStorageBin.getCount() - NEEDED_FOOD;
         int surplusTomatoes = tomatoStorageBin.getCount() - NEEDED_FOOD;
         int surplusWheat = wheatStorageBin.getCount() - NEEDED_FOOD;
-        removeSurplust(surplusEggs, surplusTomatoes, surplusWheat);
+        removeSurplus(surplusEggs, surplusTomatoes, surplusWheat);
         return surplusEggs + surplusTomatoes + surplusWheat;
     }
 
-    private void removeSurplust(int supurplusEggs, int surplusTomatoes, int surplusWheat) {
-        eggStorageBin.get(supurplusEggs);
+    private void removeSurplus(int surplusEggs, int surplusTomatoes, int surplusWheat) {
+        eggStorageBin.get(surplusEggs);
         tomatoStorageBin.get(surplusTomatoes);
         wheatStorageBin.get(surplusWheat);
     }

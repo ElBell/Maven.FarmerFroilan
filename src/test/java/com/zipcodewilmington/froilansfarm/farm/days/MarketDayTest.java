@@ -28,14 +28,11 @@ public class MarketDayTest {
     @Test
     public void run() {
         int foodBefore = farm.getFridge().totalFood();
-        System.out.println(foodBefore);
         marketDay.run();
         int foodAfter = farm.getFridge().totalFood();
-        System.out.println(foodAfter);
-        int actual = foodAfter - foodBefore;
-        System.out.println(actual);
-        int expected = -10;
-        Assert.assertEquals(expected, actual);
+
+
+        Assert.assertTrue(foodBefore > foodAfter);
     }
 
 
