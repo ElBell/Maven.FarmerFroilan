@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.farm.utilities;
 
 import com.zipcodewilmington.froilansfarm.farm.Farm;
+import com.zipcodewilmington.froilansfarm.farm.days.Day;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.EarCorn;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Tomato;
 import com.zipcodewilmington.froilansfarm.farm.edibles.edibleutilities.Edible;

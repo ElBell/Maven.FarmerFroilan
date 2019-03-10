@@ -28,11 +28,11 @@ public class FertilizeDayTest {
         //Given
         farm.setFridge(new Fridge());
         FertilizeDay fertilizeDay = new FertilizeDay();
-        String expected = "Fridge{" +
-                "tomatoes=" + " {70}" +
-                ", eggs=" + " {70}" +
-                ", corn=" + " {40}" +
-                ", wheat=" + " {70}" +
+        String expected = "    Fridge{" +
+                "tomatoes=" + " {150}" +
+                ", eggs=" + " {150}" +
+                ", corn=" + " {120}" +
+                ", wheat=" + " {150}" +
                 '}';
         //When
         fertilizeDay.feedEveryHorse();
@@ -47,11 +47,11 @@ public class FertilizeDayTest {
         //Given
         farm.setFridge(new Fridge());
         FertilizeDay fertilizeDay = new FertilizeDay();
-        String expected = "Fridge{" +
-                "tomatoes=" + " {68}" +
-                ", eggs=" + " {65}" +
-                ", corn=" + " {69}" +
-                ", wheat=" + " {70}" +
+        String expected = "    Fridge{" +
+                "tomatoes=" + " {148}" +
+                ", eggs=" + " {145}" +
+                ", corn=" + " {149}" +
+                ", wheat=" + " {150}" +
                 '}';
         //When
         fertilizeDay.feedingFroilan();
@@ -66,11 +66,11 @@ public class FertilizeDayTest {
         //Given
         farm.setFridge(new Fridge());
         FertilizeDay fertilizeDay = new FertilizeDay();
-        String expected = "Fridge{" +
-                "tomatoes=" + " {69}" +
-                ", eggs=" + " {68}" +
-                ", corn=" + " {68}" +
-                ", wheat=" + " {70}" +
+        String expected = "    Fridge{" +
+                "tomatoes=" + " {149}" +
+                ", eggs=" + " {148}" +
+                ", corn=" + " {148}" +
+                ", wheat=" + " {150}" +
                 '}';
         //When
         fertilizeDay.feedingFroilanda();
@@ -100,11 +100,11 @@ public class FertilizeDayTest {
         //Given
         farm.setFridge(new Fridge());
         FertilizeDay fertilizeDay = new FertilizeDay();
-        String expected = "Fridge{" +
-                "tomatoes=" + " {67}" +
-                ", eggs=" + " {78}" +
-                ", corn=" + " {37}" +
-                ", wheat=" + " {70}" +
+        String expected = "    Fridge{" +
+                "tomatoes=" + " {147}" +
+                ", eggs=" + " {158}" +
+                ", corn=" + " {117}" +
+                ", wheat=" + " {150}" +
                 '}';
 
         //When

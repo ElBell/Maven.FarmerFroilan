@@ -44,11 +44,11 @@ private Farm farm = Farm.getInstance();
         Tractor tractor = new Tractor();
         farmer.plant(farm.getField().getAll().get(1));
         cropDuster.operate(farm);
-        String expected = "Fridge{" +
-                "tomatoes=" + " {104}" +
-                ", eggs=" + " {70}" +
-                ", corn=" + " {70}" +
-                ", wheat=" + " {70}" +
+        String expected = "    Fridge{" +
+                "tomatoes=" + " {179}" +
+                ", eggs=" + " {150}" +
+                ", corn=" + " {150}" +
+                ", wheat=" + " {150}" +
                 '}';
 
         //When
