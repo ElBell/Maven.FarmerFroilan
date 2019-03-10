@@ -98,7 +98,7 @@ public class FridgeTest {
 
     @Test
     public void toStringTest() {
-        String expected = "Fridge{tomatoes= {70}, eggs= {70}, corn= {70}, wheat= {70}}";
+        String expected = "    Fridge{tomatoes= {150}, eggs= {150}, corn= {150}, wheat= {150}}";
         Fridge fridge = new Fridge();
         String actual = fridge.toString();
         Assert.assertEquals(expected, actual);

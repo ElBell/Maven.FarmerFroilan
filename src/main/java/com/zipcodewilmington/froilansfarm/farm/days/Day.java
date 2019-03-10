@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm.farm.utilities;
+package com.zipcodewilmington.froilansfarm.farm.days;
 
 import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.farm.edibles.edibleutilities.Edible;
@@ -11,10 +11,10 @@ import com.zipcodewilmington.froilansfarm.farm.rideables.horses.Stable;
 import java.util.List;
 
 public abstract class Day {
-    private Farm farm = Farm.getInstance();
-    private Farmer froilan = (Farmer) farm.getFarmHouse().getPerson("Froilan");
-    private Pilot froilanda = (Pilot)farm.getFarmHouse().getPerson("Froilanda");
-    private Fridge fridge = farm.getFridge();
+    protected Farm farm = Farm.getInstance();
+    protected Farmer froilan = (Farmer) farm.getFarmHouse().getPerson("Froilan");
+    protected Pilot froilanda = (Pilot)farm.getFarmHouse().getPerson("Froilanda");
+    protected Fridge fridge = farm.getFridge();
 
     public abstract void run();
 

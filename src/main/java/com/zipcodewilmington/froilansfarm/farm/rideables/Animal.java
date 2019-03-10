@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public abstract class Animal implements Eater, NoiseMaker {
-    private List<Edible> eaten = new ArrayList<Edible>();
+    private List<Edible> eaten = new ArrayList<>();
 
     public void eat(List<Edible> food) {
         eaten.addAll(food);
