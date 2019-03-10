@@ -14,9 +14,10 @@ public class Fridge {
     private StorageBin<EdibleEgg> eggStorageBin = new StorageBin<>();
     private StorageBin<EarCorn> cornStorageBin = new StorageBin<>();
     private StorageBin<Wheat> wheatStorageBin = new StorageBin<>();
+    private final int NEEDED_FOOD = 150;
 
     public Fridge() {
-        for (int i = 0; i < 70; i++) {
+        for (int i = 0; i < NEEDED_FOOD; i++) {
             tomatoStorageBin.store(new Tomato());
             eggStorageBin.store(new EdibleEgg());
             cornStorageBin.store(new EarCorn());
@@ -59,9 +60,31 @@ public class Fridge {
         return tomatoStorageBin.getCount() + eggStorageBin.getCount() + cornStorageBin.getCount() + wheatStorageBin.getCount();
     }
 
+    public int totalSellableEdibles() {
+        int surplusEggs = eggStorageBin.getCount() - NEEDED_FOOD;
+        int surplusTomatoes = tomatoStorageBin.getCount() - NEEDED_FOOD;
+        int surplusWheat = wheatStorageBin.getCount() - NEEDED_FOOD;
+        removeSurplust(surplusEggs, surplusTomatoes, surplusWheat);
+        return surplusEggs + surplusTomatoes + surplusWheat;
+    }
+
+    private void removeSurplust(int supurplusEggs, int surplusTomatoes, int surplusWheat) {
+        eggStorageBin.get(supurplusEggs);
+        tomatoStorageBin.get(surplusTomatoes);
+        wheatStorageBin.get(surplusWheat);
+    }
+
+    public int totalCornToBePurchased() {
+        int neededCorn = NEEDED_FOOD - cornStorageBin.getCount();
+        for (int i = 0; i < neededCorn; i++) {
+            cornStorageBin.store(new EarCorn());
+        }
+        return neededCorn;
+    }
+
     @Override
     public String toString() {
-        return "Fridge{" +
+        return "    Fridge{" +
                 "tomatoes=" + tomatoStorageBin +
                 ", eggs=" + eggStorageBin +
                 ", corn=" + cornStorageBin +
