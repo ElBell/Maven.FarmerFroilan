@@ -13,7 +13,7 @@ public class FarmHouse {
         this.people.put(name, person);
     }
 
-    public Person getPerson(String name) {
+    public  Person getPerson(String name) {
         return people.get(name);
     }
 }

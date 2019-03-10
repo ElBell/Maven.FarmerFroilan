@@ -31,5 +31,8 @@ public abstract class Person implements Eater, NoiseMaker {
                 farm.storeInFridge(chicken.yield());
         }
     }
+    private static Person anonymous = new Person(){};
+
+    public  static Person getAnonymous() {return anonymous;};
 
 }

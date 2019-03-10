@@ -56,6 +56,11 @@ public class Fridge {
             return null;
         }
     }
+    public Integer amountOfEggs(){
+       return eggStorageBin.getCount();
+
+
+    }
     public int totalFood() {
         return tomatoStorageBin.getCount() + eggStorageBin.getCount() + cornStorageBin.getCount() + wheatStorageBin.getCount();
     }
