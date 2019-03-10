@@ -12,12 +12,12 @@ public class MarketDay extends Day{
     }
 
     private void buyingCrops() {
+        int totalCornNeeded = fridge.totalCornToBePurchased();
         System.out.println(String.format(
                 "We sold %d surplus food and need to buy %d bushels of corn.",
-                cashForMarket, fridge.totalCornToBePurchased()
+                cashForMarket, totalCornNeeded
         ));
-        cashForMarket -= fridge.totalCornToBePurchased();
-
+        cashForMarket -= totalCornNeeded;
     }
 
     private void sellingCrops() {
