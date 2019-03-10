@@ -1,8 +1,11 @@
 package com.zipcodewilmington.froilansfarm.farm.days;
 
 import com.zipcodewilmington.froilansfarm.farm.Farm;
+import com.zipcodewilmington.froilansfarm.farm.edibles.chickens.EdibleEgg;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Crop;
 import com.zipcodewilmington.froilansfarm.farm.edibles.crops.CropRow;
+import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Tomato;
+import com.zipcodewilmington.froilansfarm.farm.edibles.crops.Wheat;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -18,11 +21,11 @@ public class MarketDayTest {
     public void setUp() {
         marketDay = new MarketDay();
         farm.setFarm();
-    }
-
-    @After
-    public void tearDown() {
-        farm.setFarm();
+        for (int i = 0; i < 100; i++) {
+            farm.getFridge().store(new EdibleEgg());
+            farm.getFridge().store(new Tomato());
+            farm.getFridge().store(new Wheat());
+        }
     }
 
     @Test
@@ -30,9 +33,20 @@ public class MarketDayTest {
         int foodBefore = farm.getFridge().totalFood();
         marketDay.run();
         int foodAfter = farm.getFridge().totalFood();
-        Assert.assertTrue(foodBefore > foodAfter);
+        int expected = 300;
+        int actual = foodBefore - foodAfter;
+        Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void run2() {
+        int before = farm.getSavings();
+        marketDay.run();
+        int after = farm.getSavings();
+        int expected = 257;
+        int actual = after - before;
+        Assert.assertEquals(expected, actual);
+    }
 
 
 }
