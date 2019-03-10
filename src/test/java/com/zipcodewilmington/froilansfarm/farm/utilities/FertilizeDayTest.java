@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.farm.utilities;
 
 import com.zipcodewilmington.froilansfarm.farm.Farm;
+import com.zipcodewilmington.froilansfarm.farm.days.FertilizeDay;
 import com.zipcodewilmington.froilansfarm.farm.edibles.storage.Fridge;
 import com.zipcodewilmington.froilansfarm.farm.people.Farmer;
 import com.zipcodewilmington.froilansfarm.farm.rideables.Pilot;
@@ -11,8 +12,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class FertilizeDayTest {
     Farm farm = Farm.getInstance();
